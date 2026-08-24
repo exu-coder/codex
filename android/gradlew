@@ -1,0 +1,5 @@
+#!/bin/sh
+# Placeholder Gradle launcher. Generate the standard Gradle wrapper with:
+# gradle wrapper --gradle-version 8.7
+# This file is intentionally committed so the CI workflow can be completed with a standard wrapper.
+exec gradle "$@"
