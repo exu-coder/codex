@@ -1,0 +1,3 @@
+package com.codetyper.app;
+import android.os.*;import android.widget.*;import androidx.appcompat.app.AppCompatActivity;
+public class ResultActivity extends AppCompatActivity{public void onCreate(Bundle b){super.onCreate(b);setContentView(R.layout.activity_result);boolean ok=getIntent().getBooleanExtra("ok",false);((TextView)findViewById(R.id.result_title)).setText(ok?"LESSON COMPLETE":"GAME OVER");((TextView)findViewById(R.id.output)).setText(getIntent().getStringExtra("out"));((TextView)findViewById(R.id.stats)).setText(ok?"+"+getIntent().getIntExtra("xp",0)+" XP   "+getIntent().getIntExtra("wpm",0)+" WPM   "+getIntent().getIntExtra("acc",0)+"% accuracy":"Try again to restore your hearts.");findViewById(R.id.done).setOnClickListener(v->finish());}}
